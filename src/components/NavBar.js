@@ -4,6 +4,7 @@ import saquib_logo from '../assets/img/saquib_logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon4 from "../assets/img/github-mark-white.svg";
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -34,10 +35,11 @@ export const NavBar = () => {
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={saquib_logo} alt="Logo" />
+            <h2 className="logo_name">SAQUIB FRAZ</h2>
+            {/* <img src={saquib_logo} alt="Logo" /> */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -50,9 +52,10 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="/"><img src={navIcon1} alt="" /></a>
-                <a href="/"><img src={navIcon2} alt="" /></a>
-                <a href="/"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.facebook.com/sk.fraz"><img src={navIcon1} alt="link" /></a>
+                <a href="https://www.facebook.com/sk.fraz"><img src={navIcon2} alt="fb" /></a>
+                <a href="https://www.instagram.com/sk.fraz/"><img src={navIcon3} alt="insta" /></a>
+                <a href="https://github.com/SKfraz04"><img src={navIcon4} alt="insta" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
