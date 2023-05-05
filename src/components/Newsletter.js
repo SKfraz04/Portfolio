@@ -20,6 +20,11 @@ export const Newsletter = ({ status, message, onValidated }) => {
   const clearFields = () => {
     setEmail('');
   }
+  const [buttonText, setButtonText] = useState("Send");
+  const postdata = async (e) => {
+    e.preventDefault();
+    setButtonText("Thanks🙏");
+  };
 
   return (
       <Col lg={12}>
@@ -35,7 +40,10 @@ export const Newsletter = ({ status, message, onValidated }) => {
               <form onSubmit={handleSubmit}>
                 <div className="new-email-bx">
                   <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-                  <button type="submit">Submit</button>
+                  <button onClick={postdata} value="submit" type="submit">
+                          <span>{buttonText}</span>
+                        </button>
+                  {/* <button type="submit">Submit</button> */}
                 </div>
               </form>
             </Col>
